@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Entry Confirmed</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef7ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .code-box {
+        background: white;
+        padding: 20px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      .code-box h2 {
+        margin-bottom: 10px;
+      }
+
+      .unique-code {
+        font-size: 28px;
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 20px 0;
+        letter-spacing: 2px;
+      }
+
+      .btn {
+        background-color: #ffa94d;
+        color: #000;
+        border: none;
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      .btn:hover {
+        background-color: #ff922b;
+      }
+
+      /* -------- PRINT STYLING -------- */
+      @media print {
+        * {
+          visibility: hidden;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          background: white;
+        }
+
+        #print-section,
+        #print-section * {
+          visibility: visible;
+        }
+
+        #print-section {
+          position: fixed;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          padding: 10px;
+          font-size: 12px;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="code-box" id="print-section">
+      <h2>Parking Entry Successful!</h2>
+      <p>Please keep this Unique Code safe:</p>
+      <div class="unique-code">{{ unique_code }}</div>
+      <p>This will be required at exit.</p>
+    </div>
+
+    <button class="btn" onclick="window.print()">🖨️ Print</button>
+    <a href="{{ url_for('home') }}">
+      <button class="btn">🏠 Back to Home</button>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exit Successful</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left-card">
+        <h2>Car Exit Successful</h2>
+        <p>Total Duration Parked: <strong>{{ duration }} minutes</strong></p>
+        <p>Total Parking Charge: <strong>Rs. {{ charge }}</strong></p>
+        <a href="{{ url_for('home') }}" class="button">Go Back Home</a>
+      </div>
+    </div>
+  </body>
+</html>

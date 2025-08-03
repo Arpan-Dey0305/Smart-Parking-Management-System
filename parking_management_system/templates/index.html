@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parking Management System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left-card">
+        <h1>Smart <br />Parking <br />Management <br />System</h1>
+        <p class="tagline">Efficient. Reliable. Instant Parking Solutions.</p>
+        <a href="{{ url_for('enter') }}" class="button">Enter Parking</a>
+        <a href="{{ url_for('exit') }}" class="button">Exit Parking</a>
+      </div>
+
+      <div class="right-card">
+        <h2>About Our System</h2>
+        <p>
+          This system offers seamless entry and exit tracking for all types of
+          vehicles using a secure unique code. Track vehicle charges, timings,
+          and enhance your parking lot efficiency with real-time records.
+        </p>
+        <div class="features">
+          <div>
+            <div id="logo"><i class="fa-solid fa-car"></i></div>
+            <h4>All Vehicle Types</h4>
+            <p>Supports 2, 4, and 6 wheelers.</p>
+          </div>
+          <div>
+            <div id="logo"><i class="fa-solid fa-qrcode"></i></div>
+            <h4>Unique Entry Codes</h4>
+            <p>Secure and traceable parking via UUIDs.</p>
+          </div>
+          <div>
+            <div id="logo">
+              <i class="fa-duotone fa-solid fa-money-bill-1-wave"></i>
+            </div>
+            <h4>Live Charge Tracking</h4>
+            <p>Pay per minute with automatic calculation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Parking Management System | Designed by Arpan Dey |
+      <i class="fa-duotone fa-solid fa-phone"></i> +91 8710042392 |
+      <i class="fa-solid fa-envelope"></i> adey011003@gmail.com
+    </footer>
+  </body>
+</html>
