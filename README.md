@@ -97,4 +97,4 @@ Contributions are welcome! Feel free to fork this repo, open an issue, or submit
 ## 👨‍💻 Author
 ### Arpan Dey
 - adey011003@gmail.com
-- https://monumental-melba-466609.netlify.app/
+- https://portfolioarpan.infinityfree.me/
